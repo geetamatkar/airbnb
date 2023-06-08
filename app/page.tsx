@@ -6,9 +6,13 @@ import MediumCard from '../components/MediumCard'
 import LargeCard from '../components/LargeCard'
 import Footer from '../components/Footer'
 import Image from 'next/image'
+import getData from '../components/Data'
+import getCard from '../components/Card'
+
 
 export default async function Home() {
 
+  
   const reply = await getData();
   console.log(reply)
 
@@ -18,7 +22,7 @@ export default async function Home() {
     <div className=''>
       <Head> 
         <title>AIRBNB</title>
-        <link>rel="icon" href="/favicon.ico" </link>
+        <link>rel=&quoticon&quot href=&quot/favicon.ico&quot </link>
       </Head>
       {/*Header*/}
       <Header />
@@ -95,18 +99,9 @@ export default async function Home() {
   ) 
 }
 
-export async function getData() {
 
-  const exploreData = await fetch('https://www.jsonkeeper.com/b/4G1G');
 
-  return exploreData.json() 
   
-}
 
 
-export async function getCard() {
-  const cardsData = await fetch('https://www.jsonkeeper.com/b/VHHT')
 
-  return cardsData.json()
-
-}
