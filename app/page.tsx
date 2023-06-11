@@ -10,6 +10,8 @@ import getData from '../components/Data'
 import getCard from '../components/Card'
 
 
+
+
 export default async function Home() {
 
   
